@@ -139,3 +139,6 @@ html { overflow-x: clip; }
 body { word-break: keep-all; overflow-wrap: normal; hyphens: none; }
 .hero-content { min-width: 0; max-width: 100%; }
 .hero-title .gradient-text { display: inline; }
+
+/* 이력서 버튼 추가 시 화면 폭에 맞춰 배치 */
+.hero-cta { flex-wrap: wrap; }
