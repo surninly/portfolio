@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Pretendard:wght@300;400;600;800&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
 <body>
@@ -25,10 +25,10 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Dev<span class="text-accent">.</span>Port</a>
-            <button class="mobile-menu-btn" aria-label="메뉴 열기">
-                <i data-lucide="menu"></i>
+            <button class="mobile-menu-btn" aria-label="메뉴 열기" aria-controls="nav-links" aria-expanded="false">
+                <span aria-hidden="true">☰</span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -44,78 +44,60 @@
             <div class="hero-content reveal">
                 <p class="greeting">안녕하세요, 저는</p>
                 <h1 class="hero-title">
-                    혁신을 코딩하는<br>
+                    화면과 데이터를 연결하는<br>
                     <span class="gradient-text">프론트엔드 개발자</span><br>
                     이수민 입니다.
                 </h1>
-                <p class="hero-desc">복잡한 문제를 단순하고 우아한 인터페이스로 해결하는 것을 즐깁니다.</p>
+                <p class="hero-desc">웹과 모바일 프론트엔드, 데이터베이스 작업에 참여하며 사용자에게 필요한 서비스를 만들어갑니다.</p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">프로젝트 보기 <i data-lucide="arrow-right"></i></a>
+                    <a href="#projects" class="btn btn-primary">프로젝트 보기 <span aria-hidden="true">→</span></a>
                     <a href="#contact" class="btn btn-secondary">연락하기</a>
                 </div>
             </div>
             <div class="hero-visual reveal fade-right">
                 <div class="image-glass-container">
-                    <img src="assets/images/profile.png" alt="개발자 프로필 사진">
-                    <div class="floating-badge badge-1"><i data-lucide="code-2"></i> Clean Code</div>
-                    <div class="floating-badge badge-2"><i data-lucide="zap"></i> Fast Perf</div>
+                    <img src="assets/images/profile.jpg" alt="이수민 증명사진" width="413" height="531">
+                    <div class="floating-badge badge-1"><span aria-hidden="true">&lt;/&gt;</span> Frontend</div>
+                    <div class="floating-badge badge-2"><span aria-hidden="true">▤</span> Database</div>
                 </div>
             </div>
         </section>
 
+        <section id="about" class="section-padding about-section">
+            <div class="section-header"><h2 class="section-title">About <span class="text-accent">Me</span></h2><div class="section-line"></div></div>
+            <p>안녕하세요, 이수민입니다. AI 연기 코칭 서비스 VectorAct, 보육 소통 앱 Warm Tech, SQL 학습 게임 SQLPG 프로젝트에 참여했습니다. 프론트엔드 개발을 중심으로 웹과 모바일 화면을 만들고, VectorAct에서는 DB 작업도 함께 담당했습니다.</p>
+        </section>
+        <section id="skills" class="section-padding skills-section"><div class="section-header"><h2 class="section-title">Project <span class="text-accent">Stack</span></h2><div class="section-line"></div></div><p class="section-description">참여 프로젝트에서 사용한 기술입니다.</p><ul class="skill-list"><li>React</li><li>TypeScript</li><li>Flutter</li><li>Dart</li><li>SQL</li><li>Phaser</li></ul></section>
         <!-- Projects Section -->
         <section id="projects" class="projects section-padding">
             <div class="section-header reveal">
                 <h2 class="section-title">Selected <span class="text-accent">Projects</span></h2>
                 <div class="section-line"></div>
             </div>
+            <p class="section-description">직접 참여한 프로젝트와 담당 역할입니다. 버튼을 누르면 각 프로젝트의 Git 저장소로 이동합니다.</p>
             <div class="project-grid">
                 <article class="project-card glass reveal">
-                    <div class="project-image">
-                        <img src="assets/images/project1.png" alt="E-commerce">
-                    </div>
-                    <div class="project-info">
-                        <h3>NextShop Dashboard</h3>
-                        <p class="project-desc">판매자를 위한 종합 이커머스 관리 대시보드.</p>
-                        <ul class="tech-stack">
-                            <li>Next.js</li>
-                            <li>TypeScript</li>
-                            <li>Tailwind CSS</li>
-                        </ul>
-                    </div>
+                    <div class="project-cover vector-db" aria-hidden="true"><span>01 / DATABASE</span><strong>VectorAct</strong><p>DATA &amp; STRUCTURE</p></div>
+                    <div class="project-info"><p class="project-role">DB 담당</p><h3>VectorAct · DB</h3><p class="project-desc">AI 연기 코칭 서비스의 데이터를 관리하는 프로젝트입니다. 사용자 계정, 코칭 세션, 영상과 분석 결과를 다루는 WAS 저장소입니다.</p><ul class="tech-stack"><li>Database</li><li>SQL</li><li>WAS</li></ul><a class="project-link" href="https://gitlab.com/persona_lab/Vector_Act_WAS.git" target="_blank" rel="noopener noreferrer" aria-label="VectorAct DB 담당 프로젝트 확인하기 (새 탭)">프로젝트 확인하기 <span aria-hidden="true">↗</span></a></div>
                 </article>
-                <article class="project-card glass reveal" style="transition-delay: 0.1s;">
-                    <div class="project-image">
-                        <img src="assets/images/project2.png" alt="Finance App">
-                    </div>
-                    <div class="project-info">
-                        <h3>FinTrack Mobile</h3>
-                        <p class="project-desc">개인 자산 관리를 위한 금융 서비스 UI 모바일 웹.</p>
-                        <ul class="tech-stack">
-                            <li>React</li>
-                            <li>Chart.js</li>
-                            <li>Styled-Components</li>
-                        </ul>
-                    </div>
+                <article class="project-card glass reveal">
+                    <div class="project-cover vector-front" aria-hidden="true"><span>02 / FRONTEND</span><strong>VectorAct</strong><p>INTERFACE &amp; EXPERIENCE</p></div>
+                    <div class="project-info"><p class="project-role">프론트엔드 담당</p><h3>VectorAct · 프론트엔드</h3><p class="project-desc">AI 연기 코칭 서비스의 웹 프론트엔드입니다. 연습 설정부터 실시간 코칭, 분석 결과와 성장 기록까지 이어지는 사용자 화면을 제공합니다.</p><ul class="tech-stack"><li>React</li><li>TypeScript</li><li>Vite</li></ul><a class="project-link" href="https://gitlab.com/persona_lab/vector-act-front.git" target="_blank" rel="noopener noreferrer" aria-label="VectorAct 프론트엔드 담당 프로젝트 확인하기 (새 탭)">프로젝트 확인하기 <span aria-hidden="true">↗</span></a></div>
                 </article>
-                <article class="project-card glass reveal" style="transition-delay: 0.2s;">
-                    <div class="project-image">
-                        <img src="assets/images/project3.png" alt="AI Analytics">
-                    </div>
-                    <div class="project-info">
-                        <h3>DataSense AI Analytics</h3>
-                        <p class="project-desc">대규모 데이터를 분석하고 시각화하는 B2B SaaS 대시보드.</p>
-                        <ul class="tech-stack">
-                            <li>Vue 3</li>
-                            <li>Vite</li>
-                            <li>D3.js</li>
-                        </ul>
-                    </div>
+                <article class="project-card glass reveal">
+                    <div class="project-cover warm-tech" aria-hidden="true"><span>03 / MOBILE APPLICATION</span><strong>Warm Tech</strong><p>CONNECTING EVERYDAY</p></div>
+                    <div class="project-info"><p class="project-role">프론트엔드 담당</p><h3>Warm Tech · 프론트엔드</h3><p class="project-desc">보육기관과 학부모를 연결하는 소통 앱입니다. 알림장, 앨범, 채팅, 출결 등 아이의 일상을 함께 확인하는 화면으로 구성되어 있습니다.</p><ul class="tech-stack"><li>Flutter</li><li>Dart</li><li>Mobile</li></ul><a class="project-link" href="https://gitlab.com/lzen5301/warm_tech/frontend.git" target="_blank" rel="noopener noreferrer" aria-label="Warm Tech 프론트엔드 담당 프로젝트 확인하기 (새 탭)">프로젝트 확인하기 <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="project-card glass reveal">
+                    <div class="project-cover sqlpg" aria-hidden="true"><span>04 / WEB GAME</span><strong>SQLPG</strong><p>SELECT YOUR ADVENTURE;</p></div>
+                    <div class="project-info"><p class="project-role">프론트엔드 담당</p><h3>SQLPG · 프론트엔드</h3><p class="project-desc">실제 SQL 쿼리를 작성하며 전투하고 성장하는 로그라이크 턴제 RPG입니다. 게임 플레이와 SQL 학습, AI 튜터를 하나의 웹 경험으로 연결합니다.</p><ul class="tech-stack"><li>React</li><li>Phaser</li><li>sql.js</li></ul><a class="project-link" href="https://github.com/dongd99/SQLPG.git" target="_blank" rel="noopener noreferrer" aria-label="SQLPG 프론트엔드 담당 프로젝트 확인하기 (새 탭)">프로젝트 확인하기 <span aria-hidden="true">↗</span></a></div>
                 </article>
             </div>
         </section>
 
+        <section id="contact" class="section-padding contact-section"><p class="greeting">LET’S CONNECT</p><h2 class="section-title">더 많은 작업이 궁금하다면</h2><p class="section-description">GitHub에서 프로젝트와 코드를 확인해 주세요.</p><a class="btn btn-primary" href="https://github.com/surninly" target="_blank" rel="noopener noreferrer">GitHub 프로필 보기 ↗</a></section>
     </main>
+    <footer>이수민 · Developer Portfolio <a href="#home">맨 위로 ↑</a></footer>
     <script src="script.js"></script>
 </body>
 
