@@ -134,3 +134,8 @@ footer { max-width: 1160px; margin: auto; padding: 28px 20px; border-top: 1px so
 /* 장식 배경의 모바일 가로 넘침 방지 */
 html { overflow-x: clip; }
 .bg-shape { position: fixed; pointer-events: none; max-width: 100vw; }
+
+/* 단어 중간을 끊지 않고 공백에서 줄바꿈 */
+body { word-break: keep-all; overflow-wrap: normal; hyphens: none; }
+.hero-content { min-width: 0; max-width: 100%; }
+.hero-title .gradient-text { display: inline; }
